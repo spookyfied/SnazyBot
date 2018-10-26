@@ -8,7 +8,7 @@ module.exports.run = async (bot, message, args) => {
   let botmessage = args.join(" ");
   message.channel.send(botmessage);
 }
-
+message.content
 module.exports.help = {
   name: "say"
 }
