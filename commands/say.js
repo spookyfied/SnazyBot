@@ -8,12 +8,7 @@ module.exports.run = async (bot, message, args) => {
   let botmessage = args.join(" ");
   message.channel.send(botmessage);
 }
-RichEmbed:
+
 module.exports.help = {
   name: "say"
 }
-{
-message.channel.send({embed: {
-  color: 3447003,
-  description: "A very simple Embed!"
-}});
