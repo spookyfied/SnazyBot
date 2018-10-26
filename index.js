@@ -122,4 +122,4 @@ bot.on("message", async message => {
 
 });
 
-client.login(token);
+bot.login(process.env.BOT_TOKEN)
