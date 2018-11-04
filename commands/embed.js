@@ -28,5 +28,5 @@ exports.help = {
     name: "say",
     category: "Miscelaneous",
     description: "Embed a message you want.",
-    usage: "say"
+    usage: "embed"
 };
