@@ -7,8 +7,7 @@ module.exports.run = async (client, message, args) => {
         .setDescription(`${message.author}, Please specify a word or message to embed.`)
         .setTimestamp();
 
-let words = args.join(` `); 
-
+    if (!args[0]) return message.channel.send(specifyembed);
 
     let embedsay = new Discord.RichEmbed()
         .setColor('RANDOM')
