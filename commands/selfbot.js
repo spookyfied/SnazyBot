@@ -1,7 +1,4 @@
 console.log("DISCORD DISCRIM SEEKER || created by spooky#0002");
-
-const config = require("./config.json");
-
 const Discord = require("discord.js");
 const client = new Discord.Client({ fetchAllMembers: true });
 
