@@ -1,15 +1,32 @@
-           //#say.js
-const Discord = require("discord.js");
-const errors = require("../utils/errors.js");
+const Discord = require('discord.js');
 
-module.exports.run = async (bot, message, args) => {
+module.exports.run = async (client, message, args) => {
 
-  message.delete();
-  if(!message.member.hasPermission("MANAGE_MESSAGES")) return errors.noPerms(message, "MANAGE_MESSAGES");
-  let botmessage = args.join(" ");
-  message.channel.send(botmessage);
-}
+    let specifyembed = new Discord.MessageEmbed()
+        .setColor(0xF55D5D)
+        .setDescription(`${message.author}, Please specify a word or message to embed.`)
+        .setTimestamp();
 
-module.exports.help = {
-  name: "say"
-}
+    if (!args[0]) return message.channel.send(specifyembed);
+
+    let embedsay = new Discord.MessageEmbed()
+        .setColor('RANDOM')
+        .setAuthor(message.author.tag, message.author.avatarURL)
+        .setDescription(`${args[0]}`);
+
+    message.channel.send(embedsay);
+};
+
+exports.conf = {
+    enabled: true,
+    guildOnly: false,
+    aliases: [],
+    permLevel: "User"
+};
+
+exports.help = {
+    name: "embed",
+    category: "Miscelaneous",
+    description: "Embed a message you want.",
+    usage: "embed"
+};
