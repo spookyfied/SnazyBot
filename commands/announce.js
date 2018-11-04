@@ -1,4 +1,4 @@
-const send = require("quick.hook");
+const Discord = require('discord.js');
 exports.run = (Discord, client, message, args) => {
 
        if (!message.member.hasPermission("ADMINISTRATOR")) return message.channel.send("You need the ADMINISTRATOR permission to run this comamnd!")
