@@ -8,6 +8,7 @@ module.exports.run = async (client, message, args) => {
         .setTimestamp();
 
     if (!args[0]) return message.channel.send(specifyembed);
+      let embedsay = args.join(" ");
 
     let embedsay = new Discord.RichEmbed()
         .setColor('RANDOM')
