@@ -27,8 +27,8 @@ fs.readdir("./commands/", (err, files) => {
 
 bot.on("ready", async () => {
 
-  console.log(`${bot.user.username} is online on ${bot.guilds.size} servers!`);
-  bot.user.setActivity("my Servers", {type: "STREAMING"});
+  await client.change_status(game=discord.Game(name="Moderation", url="twitch.tv/ksivslogan2k18", type=1))
+
 
 });
 
